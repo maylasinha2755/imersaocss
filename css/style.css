@@ -1,0 +1,36 @@
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2014/06/16/23/40/blue-370128_1280.png");
+    background-size: cover;
+    font-family: Arial;
+}
+
+.menu {
+    background-color: white;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: teal;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-title, .site-subtitle {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.site-subtitle {
+    font-style: italic;
+}
