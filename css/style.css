@@ -1,11 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-image: url("https://cdn.pixabay.com/photo/2014/06/16/23/40/blue-370128_1280.png");
-    background-size: cover;
+    background-image: url("https://image.freepik.com/vetores-gratis/fundo-ondulado-escuro_23-2148402809.jpg");
+    background-size: auto 100vh;
     font-family: Arial;
+    height: 100vh;
+    font-size: 10px;
+}
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 320px){
+    body{
+        font-size: 14px;
+    }
+    header{
+        height: 50vh;
+    }
+}
+
+/* breakpoint */
+@media (min-width: 600px){
+    body{
+        font-size: 18px;
+    }
+    header{
+        height: 100vh;
+    }
+}
+
+@media (min-width: 1200px){
+    body{
+        font-size: 20px;
+    }
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
     background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
 
 .menu ul {
@@ -17,6 +60,11 @@ body {
     list-style: none;
 }
 
+.menu a{
+    padding: 10px 20px;
+    display: block;
+}
+
 a {
     text-decoration: none;
     color: teal;
@@ -24,6 +72,7 @@ a {
 
 a:hover {
     text-decoration: underline;
+    background-color: rgb(140, 212, 214);
 }
 
 .site-title, .site-subtitle {
@@ -31,6 +80,15 @@ a:hover {
     text-align: center;
 }
 
+.site-title{
+    font-size: 4em;
+}
+
 .site-subtitle {
     font-style: italic;
+}
+
+.img-portfolio{
+    width: 180px;
+    height: 180px;
 }
