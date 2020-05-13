@@ -5,11 +5,12 @@
 }
 
 body {
-    background-image: url("https://image.freepik.com/vetores-gratis/fundo-ondulado-escuro_23-2148402809.jpg");
+    background-image: url("https://c.wallhere.com/photos/84/c0/minimalism_abstract_low_poly_gradient_blue-1361711.jpg!d");
     background-size: auto 100vh;
-    font-family: Arial;
+    font-family: 'Kalam', cursive;
     height: 100vh;
     font-size: 10px;
+    background-size: cover;
 }
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
 @media (min-width: 320px){
@@ -34,6 +35,8 @@ body {
 @media (min-width: 1200px){
     body{
         font-size: 20px;
+        /* background-image: none;
+        background-color: teal; */
     }
 }
 
@@ -68,27 +71,101 @@ header{
 a {
     text-decoration: none;
     color: teal;
+    transition: 0.3s ease-in;
 }
 
 a:hover {
     text-decoration: underline;
-    background-color: rgb(140, 212, 214);
+    background-color: #53b4da;
+    color: whitesmoke;
+    transition-property: background-color, .6s;
+}
+
+.portifolio{
+    padding: 2em;
+    height: 100vh;
+}
+
+.portifolio h2{
+    font-family: 'Monoton', cursive;
+    color: rgb(248, 239, 239);
+    margin-bottom: 1.5em;
+    font-size: 1.6em;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.4), 2px 2px gray;
+}
+
+.img-portfolio{
+    height: 180px;
+    width: 240px;
+    border: 5px solid rgb(166, 181, 248);
+    border-radius: 0.7em;
+    box-shadow: 2px 2px rgba(3, 3, 58, 0.5);
+    -webkit-border-radius: 0.7em;
+    -moz-border-radius: 0.7em;
+    -ms-border-radius: 0.7em;
+    -o-border-radius: 0.7em;
+    object-fit: cover;
+    object-position: left top;
+    transition: transform .4s, opacity .4s;
+    -webkit-transition: transform .4s, opacity .4s;
+    -moz-transition: transform .4s, opacity .4s;
+    -ms-transition: transform .4s, opacity .4s;
+    -o-transition: transform .4s, opacity .4s;
+}
+
+.img-portfolio:hover{
+    transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    opacity: .8;
 }
 
 .site-title, .site-subtitle {
     color: whitesmoke;
     text-align: center;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .site-title{
     font-size: 4em;
+    font-family: 'Baloo Tamma 2', cursive;
+    /* font-family: 'Kalam', cursive; */
+    
 }
 
 .site-subtitle {
     font-style: italic;
+    /* font-family: 'Kalam', cursive; */
+    font-family: 'Baloo Tamma 2', cursive;
 }
 
-.img-portfolio{
-    width: 180px;
-    height: 180px;
+.portifolio .grid{
+    display: grid;
+    gap: 2em;
 }
+
+@media (min-width: 560px){
+    .portifolio .grid{
+        grid-template-columns: 250px 250px;
+    }
+}
+
+@media (min-width: 991px){
+    .portifolio .grid{
+        grid-template-columns: repeat(3, 300px);
+        align-content: center;
+        justify-content: center;
+        height: calc(100vh - 8em - 48px);
+    }
+    .img-portfolio{
+        height: 200px;
+        width: 300px;
+    }
+}
+
+.portifolio figure{
+    text-align: center;
+}
+
